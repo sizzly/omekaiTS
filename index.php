@@ -97,23 +97,15 @@
 
 </div>
 
-    <h2><?php echo __('Recently Added Items'); ?></h2>
-        <div class="row" data-masonry='{"percentPosition": true }'>
-            <?php
-                $recentItems = get_theme_option('Homepage Recent Items');
-                if ($recentItems === null || $recentItems === ''):
-                    $recentItems = 3;
-                else:
-                    $recentItems = (int) $recentItems;
-                endif;
-                if ($recentItems):
-            ?>
+<h2><?php echo __('Recently Added Items'); ?></h2>
+<div class="row" data-masonry='{"percentPosition": true }'>
+    <?php
+        $recentItems = get_theme_option('Homepage Recent Items');
+    ?>
 
-            <?php echo recent_items($recentItems); ?>
+    <?php echo recent_items($recentItems); ?>
             
-        </div>
-        <p class="view-items-link"><a href="<?php echo html_escape(url('items')); ?>"><?php echo __('View All Items'); ?></a></p>
-    <?php endif; ?>
 </div>
+<p class="view-items-link"><a href="<?php echo html_escape(url('items')); ?>"><?php echo __('View All Items'); ?></a></p>
 
 <?php echo foot(); ?>
