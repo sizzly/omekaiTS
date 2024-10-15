@@ -1,6 +1,6 @@
 <?php
 $pageTitle = __('Browse Collections');
-echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));
+echo head(array('title'=>$pageTitle));
 ?>
 
 <h1 class="page-header"><?php echo $pageTitle; ?> <?php echo __('(%s total)', $total_results); ?></h1>
